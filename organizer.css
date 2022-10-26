@@ -1,0 +1,121 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    position: relative;
+    left: 35%;
+    top: -3px;
+    width: 50px;
+    cursor: pointer;
+}
+.flexbox a{
+    text-decoration: none;
+    color:#575a5c;
+}
+.flexbox{
+    display: flex;
+    gap: 20em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+}
+.flexbox-part-one a{
+    font-size: 1.2em;
+}
+.flexbox-part-one{
+    padding: 1.5em 0em;
+    display: flex;
+    gap: 15em;
+}
+.flexbox-part-two{
+    display: flex;
+    gap: 1.5em;
+    padding: 1.5em 0em;
+}
+.flexbox-part-two a{
+    font-size: 1em;
+    transition: color 150ms;
+}
+.flexbox-part-two a:hover{
+    color:black;
+}
+.organizer{
+    margin: 10em 10em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+    row-gap: 2em;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px 0;
+}
+.card-title{
+    text-align: center;
+    margin-top: -8px;
+    font-weight: 600;
+    color: #5f6368;
+    font-size: 1.3em;
+}
+.card-image{
+    width: 150px;
+    position: relative;
+    left: 22.5%
+}
+.card-subtitle{
+    text-align: center;
+    font-size: 0.9em;
+    color: #5f6368;
+}
+.card-text{
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 1em;
+}
+#colton-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#sachin-card{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.footer-nav{
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    gap: 2em;
+}
+.footer-part{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: .85em;
+}
+.footer-part a{
+    color: #787585;
+    text-decoration: none;
+}
+.social-icon{
+    margin: 50px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.social-icon a{
+    color: #4B4A54;
+    border: 1px solid #787585;
+    padding: 5px 8px;
+    border-radius: 25px;
+}
+.google-rights{
+    display: flex;
+    gap: 77.5em;
+    margin: 50px 100px 10px;
+    font-size: .9em;
+}
