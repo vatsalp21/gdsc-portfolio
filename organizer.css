@@ -1,15 +1,19 @@
 *{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
 }
 .logo{
-    position: relative;
-    left: 35%;
-    top: -3px;
+    position: fixed;
+    left: 2.5%;
+    top: 26px;
     width: 50px;
     cursor: pointer;
+}
+.logo-heading{
+    position: fixed;
 }
 .flexbox a{
     text-decoration: none;
@@ -17,6 +21,8 @@ html{
 }
 .flexbox{
     display: flex;
+    padding-top: 2px;
+    justify-content: flex-end;
     gap: 20em;
     position: fixed;
     top: 0;
@@ -25,12 +31,17 @@ html{
     z-index: 9999;
 }
 .flexbox-part-one a{
+    color:#575a5c;
     font-size: 1.2em;
+    text-decoration: none;
+    padding: 1.5em 0em;
 }
 .flexbox-part-one{
-    padding: 1.5em 0em;
     display: flex;
-    gap: 15em;
+    /* gap: 15em; */
+    position: relative;
+    left: 10%;
+    z-index: 10000;
 }
 .flexbox-part-two{
     display: flex;
@@ -51,9 +62,23 @@ html{
     column-gap: 2em;
     row-gap: 2em;
 }
+.organizer-heading{
+    font-size: 3.5em;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: .5em;
+    font-weight: 400;
+}
 .card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px 0;
+    /* cursor: pointer; */
+    transition: transform 600ms, background-color 600ms;
+}
+.card:hover{
+    background-color: #FFF5FF;
+    transform: scale(1.05);
 }
 .card-title{
     text-align: center;
@@ -61,6 +86,7 @@ html{
     font-weight: 600;
     color: #5f6368;
     font-size: 1.3em;
+    overflow-y: hidden;
 }
 .card-image{
     width: 150px;
@@ -71,6 +97,7 @@ html{
     text-align: center;
     font-size: 0.9em;
     color: #5f6368;
+    overflow-y: hidden;
 }
 .card-text{
     font-size: 0.9em;
@@ -89,7 +116,7 @@ html{
     border-top: 1px solid #dadce0;
     border-bottom: 1px solid #dadce0;
     display: flex;
-    gap: 2em;
+    gap: 9em;
 }
 .footer-part{
     margin: 50px 100px;
@@ -98,11 +125,15 @@ html{
     gap: .85em;
 }
 .footer-part a{
-    color: #787585;
+    color: #6e6c77;
     text-decoration: none;
+    transition: color 500ms;
+}
+.footer-part a:hover,.social-icon a:hover{
+    color: black;
 }
 .social-icon{
-    margin: 50px 100px;
+    margin: 45px 100px;
     display: flex;
     justify-content: center;
     gap: 3em;
@@ -112,10 +143,1523 @@ html{
     border: 1px solid #787585;
     padding: 5px 8px;
     border-radius: 25px;
+    transition: color 300ms;
 }
 .google-rights{
     display: flex;
     gap: 77.5em;
     margin: 50px 100px 10px;
-    font-size: .9em;
+    font-size: .7em;
+}
+
+
+/* Media Query Code to make the website responsive*/
+@media screen and (min-width:2300px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        top: 1em;
+        position: relative;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 15em 5em 20em;
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: 30em;
+        margin-right: 3em;
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.3);
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 20em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2300px) and (min-width: 2200px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        top: 1em;
+        position: relative;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 15em 5em 20em;
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: 25em;
+        margin-right: 3em;
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.3);
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 20em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2200px) and (min-width: 2100px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1em;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 15em 5em 20em;
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: 25em;
+        margin-right: 3em;
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.1);
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 15em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2100px) and (min-width: 1900px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        top: 1em;
+        position: relative;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 3em 5em 17.5em;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.1);
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 10em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1900px) and (min-width: 1750px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        top: 1em;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 3em 5em 17.5em;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 5em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1750px) and (min-width: 1650px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        top: 1em;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 3em 5em 10em;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0px 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 5em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width :1650px) and (min-width: 1500px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        top: 1em;
+    }
+    .organizer{
+        margin: 12em 3em 5em 8em;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: -2em 5px 110px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 3em;
+    }
+    .social-icon{
+        position: relative;
+        left: 3%;
+    }
+}
+@media screen and (max-width :1500px) and (min-width: 1280px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        top: 1em;
+        left: 8%;
+    }
+    .organizer{
+        margin: 12em 3em 5em 10em;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0px 5px 40px 5px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .footer-nav{
+        font-size: 1.3em;
+        gap: 0em;
+    }
+    .social-icon{
+        position: relative;
+        left: 3%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :1280px) and (min-width: 1000px){
+    .flexbox,.logo-heading{
+        font-size: 1.1em;
+    }
+    .organizer-heading{
+        font-size: 4em;
+        position: relative;
+        left: 8%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 12em 0em 5em 10em;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0px 0px 20px 0px;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .footer-nav{
+        font-size: 1.2em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 60px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :1000px) and (min-width: 900px){
+    .flexbox,.logo-heading{
+        font-size: 1.1em;
+    }
+    .organizer-heading{
+        font-size: 4em;
+        position: relative;
+        left: 8%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 12em 0em 5em 6em;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0px 0px 20px 0px;
+        transform: scale(.9);
+        transition: transform 500ms
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .footer-nav{
+        font-size: 1.2em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 40px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :900px) and (min-width: 800px){
+    .flexbox,.logo-heading{
+        font-size: .9em;
+    }
+    .organizer-heading{
+        font-size: 4em;
+        position: relative;
+        left: 8%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 5em 0em 5em 5em;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2em;
+        transform: scale(.75);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.80);
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #colton-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 50px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :800px) and (min-width: 700px){
+    .flexbox,.logo-heading{
+        font-size: .85em;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        left: 8%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 5em 0em 5em 10em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #abhinav-card, #hiran-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #vassav-card{
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #colton-card{
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 30px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :700px) and (min-width: 650px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        left: 8%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 5em 0em 5em 7em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #abhinav-card, #hiran-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #vassav-card{
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #colton-card{
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .85em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 20px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :650px) and (min-width: 580px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        left: 5%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 5em 0em 5em 5em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #abhinav-card, #hiran-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #vassav-card{
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #colton-card{
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .8em;
+        gap: 2em;
+    }
+    .footer-part{
+        margin: 20px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :580px) and (min-width: 500px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        left: 5%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 5em 0em 5em 1.25em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #abhinav-card, #hiran-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #vassav-card{
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #tushar-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #sachin-card{
+        grid-row-start: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #colton-card{
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :500px) and (min-width: 420px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        left: 7%;
+        top: 1em;
+    }
+    .organizer{
+        margin: 4em 0em 4em 8em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #swapnil-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #nitish-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #lisa-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #pranav-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #kunal-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    #aryan-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #prittyush-card{
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+    }
+    #saloni-card{
+        grid-row-start: 11;
+        grid-row-end: 12;
+        grid-column-start: 1;
+    }
+    #shurooq-card{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+    }
+    #aviral-card{
+        grid-row-start: 12;
+        grid-row-end: 13;
+        grid-column-start: 1;
+    }
+    #abhinav-card{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+    }
+    #melbin-card{
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+    #vassav-card{
+        grid-column-start: 1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #hiran-card{
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    #aryan-card{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #tushar-card{
+        grid-row-start: 16;
+        grid-row-end: 17;
+        grid-column-start: 1;
+    }
+    #colton-card{
+        grid-row-start: 17;
+        grid-row-end: 18;
+        grid-column-start: 1;
+    }
+    #sachin-card{
+        grid-row-start: 18;
+        grid-row-end: 19;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :420px) and (min-width: 350px){
+    .flexbox{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 2.8em;
+        position: relative;
+        left: 4%;
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 5em 0em 4em 5em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #swapnil-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #nitish-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #lisa-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #pranav-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #kunal-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    #aryan-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #prittyush-card{
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+    }
+    #saloni-card{
+        grid-row-start: 11;
+        grid-row-end: 12;
+        grid-column-start: 1;
+    }
+    #shurooq-card{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+    }
+    #aviral-card{
+        grid-row-start: 12;
+        grid-row-end: 13;
+        grid-column-start: 1;
+    }
+    #abhinav-card{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+    }
+    #melbin-card{
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+    #vassav-card{
+        grid-column-start: 1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #hiran-card{
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    #aryan-card{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #tushar-card{
+        grid-row-start: 16;
+        grid-row-end: 17;
+        grid-column-start: 1;
+    }
+    #colton-card{
+        grid-row-start: 17;
+        grid-row-end: 18;
+        grid-column-start: 1;
+    }
+    #sachin-card{
+        grid-row-start: 18;
+        grid-row-end: 19;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 2em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (width : 360px){
+    .organizer{
+        margin: 5em 0em 4em 3em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+}
+@media screen and (max-width : 392px) and (min-width: 350px){
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 1.5em;
+    }
+}
+
+@media screen and (max-width : 350px) and (min-width: 330px){
+    .flexbox{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 2.8em;
+        position: relative;
+        left: 4%;
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 5em 0em 4em 3em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #swapnil-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #nitish-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #lisa-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #pranav-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #kunal-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    #aryan-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #prittyush-card{
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+    }
+    #saloni-card{
+        grid-row-start: 11;
+        grid-row-end: 12;
+        grid-column-start: 1;
+    }
+    #shurooq-card{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+    }
+    #aviral-card{
+        grid-row-start: 12;
+        grid-row-end: 13;
+        grid-column-start: 1;
+    }
+    #abhinav-card{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+    }
+    #melbin-card{
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+    #vassav-card{
+        grid-column-start: 1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #hiran-card{
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    #aryan-card{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #tushar-card{
+        grid-row-start: 16;
+        grid-row-end: 17;
+        grid-column-start: 1;
+    }
+    #colton-card{
+        grid-row-start: 17;
+        grid-row-end: 18;
+        grid-column-start: 1;
+    }
+    #sachin-card{
+        grid-row-start: 18;
+        grid-row-end: 19;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 1.25em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width : 330px) and (min-width: 300px){
+    .flexbox{
+        font-size: .65em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 2.8em;
+        position: relative;
+        left: 4%;
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 5em 0em 4em 2em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #swapnil-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #nitish-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #lisa-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #pranav-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #kunal-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    #aryan-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #prittyush-card{
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+    }
+    #saloni-card{
+        grid-row-start: 11;
+        grid-row-end: 12;
+        grid-column-start: 1;
+    }
+    #shurooq-card{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+    }
+    #aviral-card{
+        grid-row-start: 12;
+        grid-row-end: 13;
+        grid-column-start: 1;
+    }
+    #abhinav-card{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+    }
+    #melbin-card{
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+    #vassav-card{
+        grid-column-start: 1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #hiran-card{
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    #aryan-card{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #tushar-card{
+        grid-row-start: 16;
+        grid-row-end: 17;
+        grid-column-start: 1;
+    }
+    #colton-card{
+        grid-row-start: 17;
+        grid-row-end: 18;
+        grid-column-start: 1;
+    }
+    #sachin-card{
+        grid-row-start: 18;
+        grid-row-end: 19;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 15%;
+        margin-left: 0;
+        gap: 1em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width : 300px) and (min-width: 275px){
+    .flexbox{
+        font-size: .6em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .flexbox-part-two{
+        gap: 1.2em;
+    }
+    .organizer-heading{
+        font-size: 2.5em;
+        position: relative;
+        left: 4%;
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 5em 0em 4em 1.5em;
+        /* grid-template-columns: 1fr; */
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    #swapnil-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #nitish-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #lisa-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #pranav-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #kunal-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    #aryan-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #prittyush-card{
+        grid-row-start: 10;
+        grid-row-end: 11;
+        grid-column-start: 1;
+    }
+    #saloni-card{
+        grid-row-start: 11;
+        grid-row-end: 12;
+        grid-column-start: 1;
+    }
+    #shurooq-card{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+    }
+    #aviral-card{
+        grid-row-start: 12;
+        grid-row-end: 13;
+        grid-column-start: 1;
+    }
+    #abhinav-card{
+        grid-row-start: 9;
+        grid-row-end: 10;
+        grid-column-start: 1;
+    }
+    #melbin-card{
+        grid-row-start: 15;
+        grid-row-end: 16;
+    }
+    #vassav-card{
+        grid-column-start: 1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+    #hiran-card{
+        grid-row-start: 14;
+        grid-row-end: 15;
+    }
+    #aryan-card{
+        grid-column-start: 1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+    #tushar-card{
+        grid-row-start: 16;
+        grid-row-end: 17;
+        grid-column-start: 1;
+    }
+    #colton-card{
+        grid-row-start: 17;
+        grid-row-end: 18;
+        grid-column-start: 1;
+    }
+    #sachin-card{
+        grid-row-start: 18;
+        grid-row-end: 19;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 12.5%;
+        margin-left: 0;
+        gap: .8em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
 }
