@@ -47,7 +47,6 @@ html{
 }
 .flexbox-part-one{
     display: flex;
-    /* gap: 15em; */
     position: relative;
     left: 10%;
     z-index: 10000;
@@ -57,11 +56,11 @@ html{
     gap: 1.5em;
     padding: 1.5em 0em;
 }
-.flexbox-part-two a{
+.flexbox-part-two li a, .link{
     font-size: 1em;
     transition: color 150ms;
 }
-.flexbox-part-two a:hover{
+.flexbox-part-two a:hover, .link{
     color:black;
     cursor: pointer;
 }
@@ -84,7 +83,6 @@ html{
 .card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px 0;
-    /* cursor: pointer; */
     transition: transform 600ms, background-color 600ms;
 }
 .card:hover{
@@ -171,7 +169,6 @@ html{
     }
     .organizer-heading{
         font-size: 7em;
-        top: 1.15em;
         position: relative;
         left: 3%;
     }
@@ -209,7 +206,6 @@ html{
     }
     .organizer-heading{
         font-size: 6em;
-        top: 1.15em;
         position: relative;
         left: 3%;
     }
@@ -221,7 +217,6 @@ html{
     }
     .card{
         font-size: 1.2em;
-        transform: scale(1.3);
         margin: 5em 5px 10px 15px;
         transform: scale(1.2);
         transition: transform 500ms;
@@ -249,7 +244,6 @@ html{
     .organizer-heading{
         font-size: 6em;
         position: relative;
-        top: 1.15em;
         left: 3%;
     }
     .organizer{
@@ -286,7 +280,6 @@ html{
     }
     .organizer-heading{
         font-size: 6em;
-        top: 1.15em;
         position: relative;
         left: 3%;
     }
@@ -325,7 +318,6 @@ html{
     .organizer-heading{
         font-size: 6em;
         position: relative;
-        top: 1.15em;
         left: 3%;
     }
     .organizer{
@@ -363,7 +355,6 @@ html{
     .organizer-heading{
         font-size: 6em;
         position: relative;
-        top: 1.15em;
         left: 1%;
     }
     .organizer{
@@ -400,7 +391,6 @@ html{
     .organizer-heading{
         font-size: 6em;
         position: relative;
-        top: 1.15em;
     }
     .organizer{
         margin: 5em 3em 5em 5em;
@@ -410,11 +400,11 @@ html{
     .card{
         font-size: 1.2em;
         margin: 5em 5px 10px 15px;
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: transform 500ms;
     }
     .card:hover{
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     #sachin-card{
         grid-column-start: 1;
@@ -436,18 +426,16 @@ html{
     .organizer-heading{
         font-size: 6em;
         position: relative;
-        top: 1.15em;
-        /* left: 8%; */
     }
     .organizer{
         margin: 5em 3em 5em 4.5em;
         padding-bottom: 10px;
         grid-template-columns: repeat(4, 1fr);
-        transform: scale(1);
     }
     .card{
         font-size: 1.2em;
         margin: 5em 5px 10px 15px;
+        transform: scale(1);
         transition: transform 500ms;
     }
     .card:hover{
@@ -476,8 +464,6 @@ html{
     .organizer-heading{
         font-size: 5em;
         position: relative;
-        /* left: 8%; */
-        top: 1.25em;
     }
     .organizer{
         margin: 8em 0em 5em 7em;
@@ -488,6 +474,7 @@ html{
     .card{
         font-size: 1.2em;
         margin: 2em 5px 10px 15px;
+        transform: scale(1);
         transition: transform 500ms;
     }
     .card:hover{
@@ -523,8 +510,6 @@ html{
     .organizer-heading{
         font-size: 5em;
         position: relative;
-        /* left: 8%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 8em 0em 5em 3em;
@@ -566,8 +551,6 @@ html{
     .organizer-heading{
         font-size: 5em;
         position: relative;
-        /* left: 8%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 8em 0em 5em 10em;
@@ -610,8 +593,6 @@ html{
     .organizer-heading{
         font-size: 4.5em;
         position: relative;
-        /* left: 8%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 6em;
@@ -661,8 +642,6 @@ html{
     .organizer-heading{
         font-size: 4.5em;
         position: relative;
-        /* left: 8%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 4em;
@@ -712,8 +691,6 @@ html{
     .organizer-heading{
         font-size: 3.5em;
         position: relative;
-        /* left: 5%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 2em;
@@ -764,8 +741,6 @@ html{
     .organizer-heading{
         font-size: 3.5em;
         position: relative;
-        /* left: 5%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 1.25em;
@@ -826,8 +801,6 @@ html{
     .organizer-heading{
         font-size: 3.25em;
         position: relative;
-        /* left: 7%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 7.25em;
@@ -930,8 +903,6 @@ html{
     .organizer-heading{
         font-size: 3.25em;
         position: relative;
-        /* left: 4%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 5em;
@@ -942,7 +913,7 @@ html{
     .card{
         font-size: 1.2em;
         margin: 0;
-        margin-top: -1em;
+        margin-top: -.5em;
         transform: scale(.85);
         transition: transform 500ms;
     }
@@ -1052,8 +1023,6 @@ html{
     .organizer-heading{
         font-size: 3em;
         position: relative;
-        /* left: 4%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 2.95em;
@@ -1157,8 +1126,6 @@ html{
     .organizer-heading{
         font-size: 2.8em;
         position: relative;
-        /* left: 4%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 1.9em;
@@ -1257,8 +1224,6 @@ html{
     .organizer-heading{
         font-size: 2.5em;
         position: relative;
-        /* left: 4%; */
-        top: 1.5em;
     }
     .organizer{
         margin: 6em 0em 5em 1.25em;
@@ -1275,6 +1240,104 @@ html{
     }
     .card:hover{
         transform: scale(.75);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 12.5%;
+        margin-left: 0;
+        gap: .8em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width : 275px){
+    .flexbox{
+        font-size: .55em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .flexbox-part-two{
+        gap: 1.2em;
+    }
+    .organizer-heading{
+        font-size: 2.5em;
+        position: relative;
+    }
+    .organizer{
+        margin: 6em 0em 5em 0em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em;
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2.5em;
+        transform: scale(.6);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.65);
     }
     #sachin-card{
         grid-row-start: 1;
