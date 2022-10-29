@@ -1,0 +1,1339 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    overflow-x: hidden;
+}
+.dropdown-item{
+    overflow-y: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    position: fixed;
+    left: 2.5%;
+    top: 26px;
+    width: 50px;
+    cursor: pointer;
+}
+.logo-heading{
+    position: fixed;
+    top: -4px;
+}
+.flexbox a{
+    text-decoration: none;
+    color:#575a5c;
+}
+.flexbox{
+    display: flex;
+    padding-top: 2px;
+    justify-content: flex-end;
+    gap: 20em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+}
+.flexbox-part-one a{
+    color:#575a5c;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1.5em 0em;
+}
+.link{
+    cursor: pointer;
+}
+.flexbox-part-one{
+    display: flex;
+    /* gap: 15em; */
+    position: relative;
+    left: 10%;
+    z-index: 10000;
+}
+.flexbox-part-two{
+    display: flex;
+    gap: 1.5em;
+    padding: 1.5em 0em;
+}
+.flexbox-part-two a{
+    font-size: 1em;
+    transition: color 150ms;
+}
+.flexbox-part-two a:hover{
+    color:black;
+    cursor: pointer;
+}
+.organizer{
+    margin: 10em 10em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+    row-gap: 2em;
+    overflow-y: hidden;
+}
+.organizer-heading{
+    font-size: 3.5em;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: .5em;
+    font-weight: 400;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px 0;
+    /* cursor: pointer; */
+    transition: transform 600ms, background-color 600ms;
+}
+.card:hover{
+    background-color: #FFF5FF;
+    transform: scale(1.05);
+}
+.card-title{
+    text-align: center;
+    margin-top: -8px;
+    font-weight: 600;
+    color: #5f6368;
+    font-size: 1.3em;
+    overflow-y: hidden;
+}
+.card-image{
+    width: 150px;
+    position: relative;
+    left: 22.5%
+}
+.card-subtitle{
+    text-align: center;
+    font-size: 0.9em;
+    color: #5f6368;
+    overflow-y: hidden;
+}
+.card-text{
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 1em;
+}
+#colton-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#sachin-card{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.footer-nav{
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    gap: 9em;
+}
+.footer-part{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: .85em;
+}
+.footer-part a{
+    color: #6e6c77;
+    text-decoration: none;
+    transition: color 500ms;
+}
+.footer-part a:hover,.social-icon a:hover{
+    color: black;
+}
+.social-icon{
+    margin: 45px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.social-icon a{
+    color: #4B4A54;
+    border: 1px solid #787585;
+    padding: 5px 8px;
+    border-radius: 25px;
+    transition: color 300ms;
+}
+.google-rights{
+    display: flex;
+    gap: 77.5em;
+    margin: 50px 100px 10px;
+    font-size: .7em;
+}
+
+
+/* Media Query Code to make the website responsive*/
+@media screen and (min-width:2300px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 7em;
+        top: 1.15em;
+        position: relative;
+        left: 3%;
+    }
+    .organizer{
+        margin: 10em 3em 5em 10em;
+        padding-left: 15px;
+        padding-bottom: 50px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 5em 5px 10px 15px;
+        transform: scale(1.2);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.25);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 20em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2300px) and (min-width: 2200px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        top: 1.15em;
+        position: relative;
+        left: 3%;
+    }
+    .organizer{
+        margin: 9em 3em 5em 7em;
+        padding-left: 15px;
+        padding-bottom: 50px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.3);
+        margin: 5em 5px 10px 15px;
+        transform: scale(1.2);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.25);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 20em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2200px) and (min-width: 2100px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1.15em;
+        left: 3%;
+    }
+    .organizer{
+        margin: 9em 3em 5em 5em;
+        padding-left: 15px;
+        padding-bottom: 40px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.2);
+        margin: 5em 5px 10px 15px;
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.25);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 15em;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+}
+@media screen and (max-width: 2100px) and (min-width: 1900px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        top: 1.15em;
+        position: relative;
+        left: 3%;
+    }
+    .organizer{
+        margin: 9em 3em 5em 6.5em;
+        padding-left: 15px;
+        padding-bottom: 25px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        transform: scale(1.1);
+        margin: 3em 5px 10px 15px;
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.15);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 10em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1900px) and (min-width: 1750px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1.15em;
+        left: 3%;
+    }
+    .organizer{
+        margin: 7em 3em 5em 6em;
+        padding-left: 15px;
+        padding-bottom: 25px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 3em 5px 10px 15px;
+        transform: scale(1.1);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.15);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 5em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width: 1750px) and (min-width: 1690px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1.15em;
+        left: 1%;
+    }
+    .organizer{
+        margin: 5em 3em 5em 4em;
+        padding-bottom: 15px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 5em 5px 10px 15px;
+        transform: scale(1.05);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 5em;
+    }
+    .social-icon{
+        position: relative;
+        left: 5%;
+    }
+}
+@media screen and (max-width :1690px) and (min-width: 1500px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1.15em;
+    }
+    .organizer{
+        margin: 5em 3em 5em 5em;
+        padding-bottom: 25px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 5em 5px 10px 15px;
+        transform: scale(1.1);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.15);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 3em;
+    }
+    .social-icon{
+        position: relative;
+        left: 3%;
+    }
+}
+@media screen and (max-width :1500px) and (min-width: 1370px){
+    .flexbox,.logo-heading{
+        font-size: 1.3em;
+    }
+    .organizer-heading{
+        font-size: 6em;
+        position: relative;
+        top: 1.15em;
+        /* left: 8%; */
+    }
+    .organizer{
+        margin: 5em 3em 5em 4.5em;
+        padding-bottom: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        transform: scale(1);
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 5em 5px 10px 15px;
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.3em;
+        gap: 0em;
+    }
+    .social-icon{
+        position: relative;
+        left: 3%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :1370px) and (min-width: 1100px){
+    .flexbox,.logo-heading{
+        font-size: 1.1em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        /* left: 8%; */
+        top: 1.25em;
+    }
+    .organizer{
+        margin: 8em 0em 5em 7em;
+        padding-bottom: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 2em 5px 10px 15px;
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #britto-card{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .footer-nav{
+        font-size: 1.2em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 60px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :1100px) and (min-width: 1000px){
+    .flexbox,.logo-heading{
+        font-size: 1.1em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        /* left: 8%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 8em 0em 5em 3em;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 2em 5px 10px 15px;
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1.2em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 40px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :1000px) and (min-width: 850px){
+    .flexbox,.logo-heading{
+        font-size: .9em;
+    }
+    .organizer-heading{
+        font-size: 5em;
+        position: relative;
+        /* left: 8%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 8em 0em 5em 10em;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        transform: scale(.85);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.9);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 50px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :850px) and (min-width: 750px){
+    .flexbox,.logo-heading{
+        font-size: .85em;
+    }
+    .organizer-heading{
+        font-size: 4.5em;
+        position: relative;
+        /* left: 8%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 6em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 30px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :750px) and (min-width: 650px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 4.5em;
+        position: relative;
+        /* left: 8%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 4em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        transform: scale(.75);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.8);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .85em;
+        gap: 0em;
+    }
+    .footer-part{
+        margin: 20px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :650px) and (min-width: 580px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3.5em;
+        position: relative;
+        /* left: 5%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 2em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2.5em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .8em;
+        gap: 2em;
+    }
+    .footer-part{
+        margin: 20px;
+    }
+    .social-icon{
+        position: relative;
+        left: 9%;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :580px) and (min-width: 550px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3.5em;
+        position: relative;
+        /* left: 5%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 1.25em;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2.5em;
+        transform: scale(.65);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.7);
+    }
+    #sachin-card{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :550px) and (min-width: 460px){
+    .flexbox{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 7%;
+    }
+    .organizer-heading{
+        font-size: 3.25em;
+        position: relative;
+        /* left: 7%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 7.25em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: 0;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width :550px) and (min-width: 500px){
+    .organizer{
+        margin: 6em 0em 5em 8.25em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+}
+@media screen and (max-width :460px) and (min-width: 400px){
+    .flexbox{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 3.25em;
+        position: relative;
+        /* left: 4%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 5em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -1em;
+        transform: scale(.85);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.9);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 2em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (width : 360px){
+    .organizer{
+        margin: 5em 0em 4em 3em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+}
+@media screen and (max-width : 460px) and (min-width: 425px){
+    .organizer{
+        margin: 5em 0em 4em 5.75em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em; 
+        row-gap: 0em; 
+    }
+}
+@media screen and (max-width : 392px) and (min-width: 350px){
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 1.5em;
+    }
+}
+
+@media screen and (max-width : 400px) and (min-width: 330px){
+    .flexbox{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 3em;
+        position: relative;
+        /* left: 4%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 2.95em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em;
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -1em;
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 10%;
+        margin-left: 0;
+        gap: 1.25em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width : 400px) and (min-width: 360px){
+    .organizer{
+        margin: 6em 0em 5em 3.75em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em;
+        row-gap: 0em; 
+    }
+}
+@media screen and (max-width : 330px) and (min-width: 300px){
+    .flexbox{
+        font-size: .65em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .organizer-heading{
+        font-size: 2.8em;
+        position: relative;
+        /* left: 4%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 1.9em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em;
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2.25em;
+        transform: scale(.75);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.8);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 15%;
+        margin-left: 0;
+        gap: 1em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width : 300px) and (min-width: 275px){
+    .flexbox{
+        font-size: .55em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .logo{
+        top: 20px;
+        left: 2%;
+    }
+    .flexbox{
+        padding-right: 0;
+    }
+    .flexbox-part-two{
+        gap: 1.2em;
+    }
+    .organizer-heading{
+        font-size: 2.5em;
+        position: relative;
+        /* left: 4%; */
+        top: 1.5em;
+    }
+    .organizer{
+        margin: 6em 0em 5em 1.25em;
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0em;
+        row-gap: 0em; 
+    }
+    .card{
+        font-size: 1.2em;
+        margin: 0;
+        margin-top: -2.5em;
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    #sachin-card{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 2;
+    }
+    #colton-card{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #sukrit-card{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #manan-card{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+    }
+    #vatsal-card{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+    }
+    #divyansh-card{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+    }
+    #britto-card{
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+    }
+    .footer-nav{
+        font-size: .8em;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        gap: 1em;
+        margin: 0 0 5px 20px;
+    }
+    #footer-logo-flexbox{
+        flex-direction: column;
+    }
+    .footer-logo{
+        right: 0;
+    }
+    .social-icon{
+        position: relative;
+        left: 12.5%;
+        margin-left: 0;
+        gap: .8em;
+    }
+    .google-rights{
+        margin-left: 20px;
+    }
+}
