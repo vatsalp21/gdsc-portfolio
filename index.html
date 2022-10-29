@@ -1,105 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>GDSC Portfolio Site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>GDSC Portfolio Site</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <nav>
-    <div class="logo-image">
-      <a class="navbar-brand mx-auto" href="index.html">
-        <img class="header-logo" src="img/GDSClogo.png" width="520" height="35" alt="GDSC" />
-      </a>
-    </div>
-    <input type="checkbox" id="click" />
-    <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <ul>
-      <li><a class="active" href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="organizer.html">Organizers</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Feedback</a></li>
-    </ul>
-  </nav>
-  <div class="baner-card">
-    <img src="img/Facebook banner_jWUnEH5.png" width="1550" height="350">
-    <div class="banner-text">
-      <p>CHRIST (Deemed to be University)<br> - Bengaluru</p>
-    </div>
-  </div>
-  <div class="content">
-    <div>Christ University GDSC Portfolio Website</div>
-    <p>
-      Google Developer Student Clubs are university based community groups for students interested
-      in Google developer technologies. Students from all undergraduate or graduate programs with
-      an interest in growing as a developer are welcome. By joining a GDSC, students grow their
-      knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.
-    </p>
-
-    <center>
-      <!--image slider start-->
-      <div class="slider">
-        <div class="slides">
-          <!--radio buttons start-->
-          <input type="radio" name="radio-btn" id="radio1" />
-          <input type="radio" name="radio-btn" id="radio2" />
-          <input type="radio" name="radio-btn" id="radio3" />
-          <input type="radio" name="radio-btn" id="radio4" />
-          <!--radio buttons end-->
-          <!--slide images start-->
-          <div class="slide first">
-            <img src="img/img1.jpg" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/img2.jpg" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/img3.jpg" alt="" />
-          </div>
-          <div class="slide">
-            <img src="img/img4.jpg" alt="" />
-          </div>
-          <!--slide images end-->
-          <!--automatic navigation start-->
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
-          <!--automatic navigation end-->
-        </div>
-        <!--manual navigation start-->
-        <div class="navigation-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
-        </div>
-        <!--manual navigation end-->
+  <body>
+    <nav>
+      <div class="logo-image">
+        <a class="navbar-brand mx-auto" href="index.html">
+          <img
+            class="header-logo"
+            src="img/GDSClogo.png"
+            width="520"
+            height="35"
+            alt="GDSC"
+          />
+        </a>
       </div>
-      <!--image slider end-->
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="organizer.html">Organizers</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="baner-card">
+      <img src="img/Facebook banner_jWUnEH5.png" width="1550" height="350" />
+      <div class="banner-text">
+        <strong
+          ><p class="homepage-header">
+            CHRIST (Deemed to be University)<br />
+            - Bengaluru
+          </p></strong
+        >
+      </div>
+    </div>
+    <div class="content">
+      <p>
+        Google Developer Student Clubs are university based community groups for
+        students interested in Google developer technologies. Students from all
+        undergraduate or graduate programs with an interest in growing as a
+        developer are welcome. By joining a GDSC, students grow their knowledge
+        in a peer-to-peer learning environment and build solutions for local
+        businesses and their community.
+      </p>
 
-      <script type="text/javascript">
-        var counter = 1;
-        setInterval(function () {
-          document.getElementById("radio" + counter).checked = true;
-          counter++;
-          if (counter > 4) {
-            counter = 1;
-          }
-        }, 5000);
-      </script>
-    </center>
-  </div>
-</body>
+      <center>
+        <!--image slider start-->
+        <div class="slider">
+          <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+              <img src="img/img1.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="img/img2.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="img/img3.jpg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="img/img4.jpg" alt="" />
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+          </div>
+          <!--manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
 
+        <script type="text/javascript">
+          var counter = 1;
+          setInterval(function () {
+            document.getElementById("radio" + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+              counter = 1;
+            }
+          }, 5000);
+        </script>
+      </center>
+    </div>
+  </body>
 </html>
