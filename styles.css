@@ -5,121 +5,75 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* overflow-x: hidden; */
+}
+html{
+    scroll-behavior: smooth;
 }
 
-nav {
-  display: flex;
-  height: 78px;
-  width: 100%;
-  background: white;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  flex-wrap: wrap;
+.logo{
+    position: fixed;
+    left: 2.5%;
+    top: 26px;
+    width: 50px;
+    cursor: pointer;
 }
-
-nav .logo {
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+.logo-heading{
+    position: fixed;
+    top: -4px;
 }
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+.flexbox a{
+    text-decoration: none;
+    color:#575a5c;
 }
-
-nav ul li {
-  margin: 0 5px;
+.flexbox{
+    display: flex;
+    padding-top: 2px;
+    justify-content: flex-end;
+    gap: 20em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
 }
-
-nav ul li a {
-  color: rgb(72, 72, 72);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+.flexbox-part-one a{
+    color:#575a5c;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1.5em 0em;
 }
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: #111;
-  background: #fff;
+.flexbox-part-one{
+    display: flex;
+    /* gap: 15em; */
+    position: relative;
+    left: 10%;
+    z-index: 10000;
 }
-
-nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
+.flexbox-part-two{
+    display: flex;
+    gap: 1.5em;
+    padding: 1.5em 0em;
+}
+.flexbox-part-two a,.logo-heading{
+    font-size: 1em;
+    transition: color 150ms;
+}
+.flexbox-part-two a:hover,.logo-heading:hover{
+    color:black;
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  nav {
-    padding: 0 40px 0 50px;
-  }
-}
-
 .homepage-header {
   color: black;
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
-@media (max-width: 920px) {
-  nav .menu-btn i {
-    display: block;
-  }
 
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  #click:checked ~ ul {
-    left: 0;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    color: cyan;
-  }
-}
 
 .content {
   top: 50%;
@@ -181,6 +135,146 @@ input[type="checkbox"] {
   width: 800px;
   height: 500px;
 }
+.about{
+    position: relative;
+    color: black;
+    top: 7em;
+}
+.about-heading{
+    font-size: 3.5em;
+    display: block;
+    text-align: center;
+}
+.about-text{
+    text-align: left;
+    display: flex;
+    margin-left: -3em;
+    justify-content: center;
+    font-size: 1.25em;
+    padding: 0 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+.join-us{
+    position: relative;
+    top: 7em;
+    display: flex;
+    gap: 6em;
+    justify-content: center;
+    font-size: 1em;
+    background-color: #F2ECFF;
+    padding: 15px 0;
+}
+.join-btn,.contact-btn{
+    background-color: #2e77ec;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 300ms;
+}
+.join-btn:hover,.contact-btn:hover{
+    background-color: #4285f4;
+    color:white;
+}
+.interaction-navbar{
+    background-color: #E0F1FF;
+    padding: 15px 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    position: relative;
+    top: 10.5em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    z-index: 0;
+}
+.interaction-navbar a{
+    text-decoration: none;
+    transition: color 300ms;
+}
+.interaction-navbar a:hover{
+    color:rgb(73, 70, 70);
+}
+.why-gdsc{
+    position: relative;
+    top: 10em;
+    display:flex;
+    justify-content: center;
+    gap: 12em;
+}
+.card{
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-title{
+    font-weight: 600;
+    font-size: 1.5em;
+    padding-bottom: .5em;
+}
+.club{
+    position: relative;
+    top: 13.15em;
+    padding: 4em 0 10em 0;
+    background-image: url(https://i.ibb.co/LJHNsMd/clubs-background-image.png);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.club-heading{
+    color: #323538;
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    opacity: 1 !important;
+    z-index: 0;
+}
+.club-text{
+    color: #323538;
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+}
+.club-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 6em 5em 3em 12em;
+}
+.card-card-body{
+    text-align: center;
+}
+.club-card{
+    transform: scale(.9);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sub-heading{
+    position: relative;
+    top: 0em;
+    padding-top: 4em;
+    background-color: #F2FAFF;
+    padding-bottom: 4em;
+}
+.photo-heading{
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 1em;
+    color: #464a4e;
+}
+.slider{
+    margin-top: -2em;
+    padding-bottom: 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+
+
+
+
+
+
 
 /*css for manual slide navigation*/
 
@@ -260,14 +354,12 @@ input[type="checkbox"] {
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background: #40d3dc;
 }
-.banner-card {
-  position: relative;
-}
-.banner-card img {
-  max-width: 100%;
-  height: auto;
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.25);
+.banner-image{
+    position: relative;
+    top: 4.75em;
+    opacity: .95;
+    width: 100%;
+    /* height: 30em; */
 }
 
 .banner-text {
@@ -279,4 +371,1880 @@ input[type="checkbox"] {
 }
 .banner-text p {
   font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Css Styling for Footer*/
+.footer-nav{
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    gap: 9em;
+}
+.footer-part{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: .85em;
+}
+.footer-part a{
+    color: #6e6c77;
+    text-decoration: none;
+    transition: color 500ms;
+}
+.footer-part a:hover,.social-icon a:hover{
+    color: black;
+}
+.social-icon{
+    margin: 45px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.social-icon a{
+    color: #4B4A54;
+    border: 1px solid #787585;
+    padding: 5px 8px;
+    border-radius: 25px;
+    transition: color 300ms;
+}
+.google-rights{
+    display: flex;
+    gap: 77.5em;
+    margin: 50px 100px 10px;
+    font-size: .7em;
+}
+
+
+/* Media Query Code for Responsiveness*/
+@media screen and (min-width: 2000px){
+    .flexbox-part-two a{
+        font-size: 1.4em;
+    }
+    .homepage-header{
+        position: relative;
+        left: 6%; 
+    }
+    .about-heading{
+        font-size: 5em;
+    }
+    .about-text{
+        font-size: 2em;
+        margin-left: -5em;
+    }
+    .join-us{
+        font-size: 1.5em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+    }
+    .card{
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.75em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 18em;
+    }
+    .club-heading{
+        font-size: 6em;
+    }
+    .club-text{
+        font-size: 2em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.2);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.25);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 6em;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 10em;
+    }
+}
+@media screen and (max-width: 2000px) and (min-width: 1800px){
+    .flexbox-part-two a{
+        font-size: 1.4em;
+    }
+    .homepage-header{
+        position: relative;
+        left: 6%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 5em;
+    }
+    .about-text{
+        font-size: 2em;
+        margin-left: -5em;
+    }
+    .join-us{
+        font-size: 1.5em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+    }
+    .card{
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.75em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 12em;
+    }
+    .club-heading{
+        font-size: 6em;
+    }
+    .club-text{
+        font-size: 2em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.2);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.25);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 6em;
+    }
+    .footer-nav{
+        font-size: 1.5em;
+        gap: 10em;
+    }
+}
+@media screen and (max-width: 1800px) and (min-width: 1600px){
+    .flexbox-part-two a{
+        font-size: 1.3em;
+    }
+    .homepage-header{
+        position: relative;
+        left: 6%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 4.5em;
+    }
+    .about-text{
+        font-size: 1.75em;
+        margin-left: -5.75em;
+    }
+    .join-us{
+        font-size: 1.5em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+    }
+    .card{
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.75em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 8em;
+    }
+    .club-heading{
+        font-size: 6em;
+    }
+    .club-text{
+        font-size: 2em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.15);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.2);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 6em;
+    }
+    .footer-nav{
+        font-size: 1.45em;
+        gap: 7em;
+    }
+}
+@media screen and (max-width: 1600px) and (min-width: 1400px){
+    .flexbox-part-two a{
+        font-size: 1.3em;
+    }
+    .homepage-header{
+        font-size: 2.75em !important;
+        position: relative;
+        left: -4%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 4em;
+    }
+    .about-text{
+        font-size: 1.5em;
+        margin-left: -7em;
+    }
+    .join-us{
+        font-size: 1.5em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+        gap: 10em;
+    }
+    .card{
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.75em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 6em;
+    }
+    .club-heading{
+        font-size: 6em;
+    }
+    .club-text{
+        font-size: 2em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.1);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.15);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 6em;
+    }
+    .footer-nav{
+        font-size: 1.35em;
+        gap: 3em;
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 1220px){
+    .flexbox-part-two a{
+        font-size: 1.3em;
+    }
+    .homepage-header{
+        font-size: 2.5em !important;
+        position: relative;
+        left: -8%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 4em;
+    }
+    .about-text{
+        font-size: 1.5em;
+        margin-left: -7em;
+    }
+    .join-us{
+        font-size: 1.35em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+        gap: 5em;
+    }
+    .card{
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.75em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 8em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .club-heading{
+        font-size: 6em;
+    }
+    .club-text{
+        font-size: 2em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.1);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.15);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 6em;
+    }
+    .footer-nav{
+        font-size: 1.3em;
+        gap: 0em;
+    }
+}
+@media screen and (max-width: 1110px) and (min-width: 1060px){
+    .flexbox-part-two a{
+        font-size: 1.2em;
+    }
+    .homepage-header{
+        font-size: 2.5em !important;
+        position: relative;
+        left: -8%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 3.5em;
+    }
+    .about-text{
+        font-size: 1.35em;
+        margin-left: -6.5em;
+    }
+    .join-us{
+        font-size: 1.3em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+        gap: 2em;
+    }
+    .card{
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.65em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 6em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .club-heading{
+        font-size: 5em;
+    }
+    .club-text{
+        font-size: 1.75em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.05);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 5em;
+    }
+    .footer-nav{
+        font-size: .9em;
+        gap: 0;
+        margin-right: 0px;
+    }
+    .footer-part{
+        margin-right: 70px;
+    }
+}
+@media screen and (max-width: 1220px) and (min-width: 1060px){
+    .flexbox-part-two a{
+        font-size: 1.2em;
+    }
+    .homepage-header{
+        font-size: 2.5em !important;
+        position: relative;
+        left: -8%;
+        margin-top: 0;
+    }
+    .about-heading{
+        font-size: 3.5em;
+    }
+    .about-text{
+        font-size: 1.35em;
+        margin-left: -6.5em;
+    }
+    .join-us{
+        font-size: 1.3em;
+    }
+    .why-gdsc{
+        top: 13em;
+        padding-bottom: 1.5%;
+        gap: 2em;
+    }
+    .card{
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.65em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 0 0em 7em 6em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .club-heading{
+        font-size: 5em;
+    }
+    .club-text{
+        font-size: 1.75em;
+    }
+    .club-card{
+        margin-top: 10em;
+        transform: scale(1.05);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 5em;
+    }
+    .slider{
+        transform: scale(.9);
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 1060px) and (min-width: 1000px){
+    .flexbox-part-two a{
+        font-size: 1.1em;
+    }
+    .homepage-header{
+        font-size: 2.35em !important;
+        position: relative;
+        left: -17%;
+        margin-top: -.5em;
+    }
+    .about-heading{
+        font-size: 3.25em;
+    }
+    .about-text{
+        font-size: 1.3em;
+        margin-left: -5em;
+    }
+    .join-us{
+        font-size: 1.2em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 13em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 9em;
+    }
+    .card{
+        transform: scale(.85);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.9);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.65em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 4em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .club-heading{
+        font-size: 4.5em;
+    }
+    .club-text{
+        font-size: 1.5em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 4.5em;
+    }
+    .slider{
+        transform: scale(.85);
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 70px;
+    }
+    .footer-part{
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 900px){
+    .flexbox-part-two a{
+        font-size: 1.1em;
+    }
+    .homepage-header{
+        font-size: 2.3em !important;
+        position: relative;
+        left: -20%;
+        margin-top: -2.5em;
+        top: -1.5em;
+    }
+    .about-heading{
+        font-size: 3.25em;
+    }
+    .about-text{
+        font-size: 1.3em;
+        margin-left: -5em;
+    }
+    .join-us{
+        font-size: 1.2em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 12em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 6em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.65em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 3em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .club-heading{
+        font-size: 4.5em;
+    }
+    .club-text{
+        font-size: 1.5em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 4.5em;
+    }
+    .slider{
+        transform: scale(.85);
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 0;
+    }
+    .footer-part{
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 830px){
+    .flexbox-part-two a{
+        font-size: 1.05em;
+    }
+    .homepage-header{
+        font-size: 2.2em !important;
+        position: relative;
+        left: -23%;
+        margin-top: -.75em;
+    }
+    .about-heading{
+        font-size: 3.15em;
+    }
+    .about-text{
+        font-size: 1.2em;
+        margin-left: -6.5em;
+    }
+    .join-us{
+        font-size: 1em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 10em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 6em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.5em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 7em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .club-heading{
+        font-size: 4.4em;
+    }
+    .club-text{
+        font-size: 1.4em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 4.4em;
+    }
+    .slider{
+        transform: scale(.75);
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 0;
+    }
+    .footer-part{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 830px) and (min-width: 760px){
+    .flexbox-part-two a{
+        font-size: 1em;
+    }
+    .homepage-header{
+        font-size: 1.9em !important;
+        position: relative;
+        left: -35%;
+        margin-top: -2.5em;
+        top: -1em;
+    }
+    .about-heading{
+        font-size: 2.9em;
+    }
+    .about-text{
+        font-size: 1.1em;
+        margin-left: -7.15em;
+    }
+    .join-us{
+        font-size: 1em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 10em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 3em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.5em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 6em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .club-heading{
+        font-size: 4.2em;
+    }
+    .club-text{
+        font-size: 1.3em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.95);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 4.3em;
+    }
+    .slider{
+        transform: scale(.7);
+        margin-left: -.5em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 0;
+    }
+    .footer-part{
+        margin-right: 0;
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 760px) and (min-width: 700px){
+    .flexbox-part-two a{
+        font-size: .9em;
+    }
+    .logo-heading{
+        font-size: 1em !important;
+        top: 2px;
+    }
+    .homepage-header{
+        font-size: 1.8em !important;
+        position: relative;
+        left: -40%;
+        margin-top: -1em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: 1em;
+        font-size: 2.7em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: 1em;
+        margin-left: -10em;
+        
+    }
+    .join-us{
+        font-size: .95em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        top: 10em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 1.5em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.4em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 5em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .club-heading{
+        font-size: 4.1em;
+    }
+    .club-text{
+        font-size: 1.2em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(.95);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1.1em;
+    }
+    .photo-heading{
+        font-size: 4.1em;
+    }
+    .slider{
+        transform: scale(.7);
+        margin-left: -1.1em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        gap: 0;
+        margin-right: 0;
+    }
+    .footer-part{
+        margin-right: 0;
+        margin-left: 60px;
+    }
+}
+@media screen and (max-width: 740px) and (min-width: 700px){
+    .about-text{
+        text-align: left;
+        font-size: 1em;
+        margin-left: -15%;
+        
+    }
+}
+@media screen and (max-width: 725px) and (min-width: 700px){
+    .homepage-header{
+        font-size: 1.6em !important;
+        position: relative;
+        left: -40%;
+        margin-top: -1em;
+    }
+}
+@media screen and (max-width: 700px) and (min-width: 630px){
+        .flexbox-part-two a{
+            font-size: .85em;
+        }
+        .logo-heading{
+            font-size: .9em !important;
+            top: 5px;
+        }
+        .homepage-header{
+            font-size: 1.6em !important;
+            position: relative;
+            left: -45%;
+            margin-top: -1.25em;
+        }
+        .about-heading{
+            text-align: left;
+            margin-left: 1em;
+            font-size: 2.4em;
+        }
+        .about-text{
+            text-align: left;
+            font-size: 1em;
+            overflow-x: hidden;
+        }
+        .join-us{
+            font-size: .9em;
+        }
+        .why-gdsc{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            top: 8em;
+            padding-bottom: 1.5%;
+            gap: 0em;
+            margin-left: 1.1em;
+        }
+        .card{
+            transform: scale(.7);
+            transition: transform 500ms;
+        }
+        .card:hover{
+            transform: scale(.75);
+        }
+        .card-title{
+            font-size: 2em;
+        }
+        .card-text{
+            font-size: 1.2em;
+        }
+        .interaction-navbar{
+            font-size: 1.4em;
+            top: 10em;
+        }
+        .club{
+            padding-top: 6em;
+        }
+        .club-grid{
+            margin: 2em 0em 7em 3em;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .club-heading{
+            font-size: 4.1em;
+        }
+        .club-text{
+            font-size: 1.2em;
+        }
+        .club-card{
+            margin-top: 5em;
+            transform: scale(.85);
+            transition: transform 500ms;
+        }
+        .club-card:hover{
+            transform: scale(.9);
+        }
+        .club-card-title{
+            font-size: 1.5em;
+        }
+        .club-card-text{
+            font-size: 1.1em;
+        }
+        .photo-heading{
+            font-size: 4em;
+        }
+        .slider{
+            transform: scale(.65);
+            margin-left: -2.25em;
+        }
+        .footer-nav{
+            font-size: 1em;
+            gap: 0;
+            margin-right: 0;
+        }
+        .footer-part{
+            margin-right: 0;
+            margin-left: 40px;
+        }
+}
+@media screen and (max-width: 630px) and (min-width: 560px){
+        .flexbox-part-two a{
+            font-size: .85em;
+        }
+        .logo-heading{
+            display: none;
+        }
+        .homepage-header{
+            font-size: 1.3em !important;
+            position: relative;
+            left: -65%;
+            margin-top: -1.25em;
+        }
+        .about-heading{
+            text-align: left;
+            margin-left: 1em;
+            font-size: 2.2em;
+        }
+        .about-text{
+            text-align: left;
+            font-size: .9em;
+            overflow-x: hidden;
+        }
+        .join-us{
+            font-size: .85em;
+        }
+        .why-gdsc{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            top: 6em;
+            padding-bottom: 1.5%;
+            gap: 0em;
+            margin-left: 8em;
+        }
+        .card{
+            transform: scale(.8);
+            transition: transform 500ms;
+        }
+        .card:hover{
+            transform: scale(.85);
+        }
+        .card-title{
+            font-size: 2em;
+        }
+        .card-text{
+            font-size: 1.2em;
+        }
+        .interaction-navbar{
+            font-size: 1.4em;
+            top: 10em;
+        }
+        .club{
+            padding-top: 6em;
+        }
+        .club-grid{
+            margin: 2em 0em 7em 10em;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .club-heading{
+            font-size: 4em;
+        }
+        .club-text{
+            font-size: 1em;
+        }
+        .club-card{
+            margin-top: 5em;
+            transform: scale(1);
+            transition: transform 500ms;
+        }
+        .club-card:hover{
+            transform: scale(1.05);
+        }
+        .club-card-title{
+            font-size: 1.5em;
+        }
+        .club-card-text{
+            font-size: 1.1em;
+        }
+        .photo-heading{
+            font-size: 3.25em;
+        }
+        .slider{
+            transform: scale(.5);
+            margin-left: -3.5em;
+        }
+        .footer-nav{
+            font-size: 1em;
+            margin-right: 0;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px 0;
+        }
+        .footer-part{
+            margin: 20px 0 0 30px;
+            gap: 1em;
+        }
+}
+@media screen and (max-width: 600px) and (min-width: 560px){
+    .homepage-header{
+        font-size: 1.15em !important;
+        position: relative;
+        left: -70%;
+        margin-top: -1.25em;
+    }
+}
+@media screen and (max-width: 560px) and (min-width: 500px){
+    .flexbox-part-two a{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .homepage-header{
+        font-size: 1em !important;
+        position: relative;
+        left: -75%;
+        margin-top: -1.25em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: 1em;
+        font-size: 2em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .85em;
+        overflow-x: hidden;
+    }
+    .join-us{
+        font-size: .8em;
+        top: 10em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        top: 8em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 6em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.2em;
+    }
+    .interaction-navbar{
+        font-size: 1.3em;
+        top: 10em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 8.5em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .club-heading{
+        font-size: 3.5em;
+    }
+    .club-text{
+        font-size: .95em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(1);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.05);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1em;
+    }
+    .photo-heading{
+        font-size: 3em;
+    }
+    .slider{
+        transform: scale(.5);
+        margin-left: -4em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        margin: 20px 0 0 30px;
+        gap: 1em;
+    }
+}
+@media screen and (max-width: 520px) and (min-width: 500px){
+    .homepage-header{
+        font-size: .9em !important;
+        position: relative;
+        left: -80%;
+        margin-top: -1.75em;
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 420px){
+    .flexbox-part-two a{
+        font-size: .85em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .homepage-header{
+        font-size: .85em !important;
+        position: relative;
+        left: -85%;
+        margin-top: -1.75em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: .5em;
+        font-size: 1.8em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .75em;
+        overflow-x: hidden;
+    }
+    .join-us{
+        font-size: .7em;
+        top: 10em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        top: 8em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 4em;
+    }
+    .card{
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.85);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.1em;
+    }
+    .interaction-navbar{
+        font-size: 1.2em;
+        top: 11em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 7em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .club-heading{
+        font-size: 3.5em;
+    }
+    .club-text{
+        font-size: .9em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(1);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(1.05);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1em;
+    }
+    .photo-heading{
+        font-size: 2.5em;
+    }
+    .slider{
+        transform: scale(.4);
+        margin-left: -5em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        margin: 20px 0 0 30px;
+        gap: 1em;
+    }
+}
+@media screen and (max-width: 480px) and (min-width: 420px){
+    .homepage-header{
+        font-size: .75em !important;
+        position: relative;
+        left: -95%;
+        margin-top: -1.75em;
+    }
+}
+@media screen and (max-width: 455px) and (min-width: 420px){
+    .homepage-header{
+        font-size: .7em !important;
+        position: relative;
+        left: -100%;
+        margin-top: -2em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: .8em;
+        font-size: 1.5em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .65em;
+        overflow-x: hidden;
+    }
+    .club-heading{
+        font-size: 3.4em;
+    }
+    .club-text{
+        font-size: .75em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 5em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 420px) and (min-width: 350px){
+    .flexbox-part-two a{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .homepage-header{
+        font-size: .6em !important;
+        display: inline-block;
+        position: relative;
+        left: -140%;
+        margin-top: -3em;
+        top: -7.5em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: .8em;
+        font-size: 1.4em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .6em;
+        overflow-x: hidden;
+    }
+    .join-us{
+        font-size: .6em;
+        top: 11em;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        top: 8em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 2em;
+    }
+    .card{
+        transform: scale(.75);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.8);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.1em;
+    }
+    .interaction-navbar{
+        font-size: 1.2em;
+        top: 11em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 5em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .club-heading{
+        font-size: 3.4em;
+    }
+    .club-text{
+        font-size: .75em;
+    }
+    .club-card{
+        margin-top: 5em;
+        transform: scale(.9);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(.95);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1em;
+    }
+    .photo-heading{
+        font-size: 2.5em;
+    }
+    .slider{
+        transform: scale(.4);
+        margin-left: -5.5em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        margin: 20px 0 0 30px;
+        gap: 1em;
+    }
+}
+@media screen and (max-width: 380px) and (min-width: 350px){
+    .homepage-header{
+        font-size: .6em !important;
+        display: inline-block;
+        position: relative;
+        left: -160%;
+        margin-top: -2.5em;
+        top: -1.5em;
+    }
+}
+@media screen and (max-width: 370px) and (min-width: 350px){
+    html{
+        width: calc(100% + 1%);
+    }
+    .homepage-header{
+        font-size: .6em !important;
+        display: inline-block;
+        position: relative;
+        left: -180%;
+        margin-top: -2.5em;
+        top: -1.5em;
+    }
+    .club-heading{
+        font-size: 3.3em;
+    }
+    .club-text{
+        font-size: .65em;
+    }
+    .club-grid{
+        margin: 2em 0em 7em 4em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .slider{
+        transform: scale(.35);
+        margin-left: -6.25em;
+    }
+}
+@media screen and (max-width: 360px) and (min-width: 350px){
+    html{
+        width: 103%;
+    }
+}
+@media screen and (max-width: 350px) and (min-width: 300px){
+    html{
+        width: calc(100% + 1%);
+    }
+    *{
+        overflow-x: hidden;
+    }
+    .banner-image{
+        height: 20em;
+    }
+    .flexbox-part-two a{
+        font-size: .7em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .homepage-header{
+        font-size: .8em !important;
+        display: inline-block;
+        position: relative;
+        left: -235%;
+        margin-top: 0;
+        top: -1em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: .8em;
+        font-size: 1.2em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .5em;
+        overflow-x: hidden;
+    }
+    .join-us{
+        font-size: .5em;
+        top: 12em;
+        width: 110%;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        top: 8em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 0;
+    }
+    .card{
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.1em;
+    }
+    .interaction-navbar{
+        font-size: 1.2em;
+        top: 11em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 4em 0em 7em 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .club-heading{
+        font-size: 3.3em;
+    }
+    .club-text{
+        font-size: .65em;
+    }
+    .club-card{
+        margin-top: 2em;
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(.85);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1em;
+    }
+    .photo-heading{
+        font-size: 2.5em;
+    }
+    .slider{
+        transform: scale(.35);
+        margin-left: -6.25em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        margin: 20px 0 0 30px;
+        gap: 1em;
+    }
+    .social-icon{
+        margin-left: 5%;
+        gap: 1em;
+    }
+}
+@media screen and (max-width: 335px) and (min-width: 300px){
+    .flexbox-part-two a{
+        font-size: .6em;
+    }
+    .homepage-header{
+        font-size: .6em !important;
+        display: inline-block;
+        position: relative;
+        left: -245%;
+        margin-top: 0;
+        top: -1em;
+    }
+}
+@media screen and (max-width: 300px) and (min-width: 260px){
+    html{
+        width: calc(100% + 5%);
+    }
+    *{
+        overflow-x: hidden;
+    }
+    .banner-image{
+        height: 20em;
+    }
+    .flexbox-part-two a{
+        font-size: .55em;
+    }
+    .logo-heading{
+        display: none;
+    }
+    .homepage-header{
+        font-size: .6em !important;
+        display: inline-block;
+        position: relative;
+        left: -355%;
+        margin-top: 0;
+        top: -1em;
+    }
+    .about-heading{
+        text-align: left;
+        margin-left: .8em;
+        font-size: 1.2em;
+    }
+    .about-text{
+        text-align: left;
+        font-size: .5em;
+        overflow-x: hidden;
+    }
+    .join-us{
+        font-size: .5em;
+        top: 12em;
+        width: 110%;
+    }
+    .why-gdsc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        top: 8em;
+        padding-bottom: 1.5%;
+        gap: 0em;
+        margin-left: 0;
+    }
+    .card{
+        transform: scale(.7);
+        transition: transform 500ms;
+    }
+    .card:hover{
+        transform: scale(.75);
+    }
+    .card-title{
+        font-size: 2em;
+    }
+    .card-text{
+        font-size: 1.1em;
+    }
+    .interaction-navbar{
+        font-size: 1.2em;
+        top: 11em;
+    }
+    .club{
+        padding-top: 6em;
+    }
+    .club-grid{
+        margin: 4em 0em 7em 1em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .club-heading{
+        font-size: 3.3em;
+    }
+    .club-text{
+        font-size: .65em;
+    }
+    .club-card{
+        margin-top: 2em;
+        transform: scale(.8);
+        transition: transform 500ms;
+    }
+    .club-card:hover{
+        transform: scale(.85);
+    }
+    .club-card-title{
+        font-size: 1.5em;
+    }
+    .club-card-text{
+        font-size: 1em;
+    }
+    .photo-heading{
+        font-size: 2em;
+    }
+    .slider{
+        transform: scale(.35);
+        margin-left: -6em;
+    }
+    .footer-nav{
+        font-size: 1em;
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .footer-part{
+        margin: 20px 0 0 30px;
+        gap: 1em;
+    }
+    .social-icon{
+        margin-left: 5%;
+        gap: .5em;
+    }
 }
