@@ -9,7 +9,7 @@ html{
 }
 .logo{
     position: fixed;
-    left: 2.5%;
+    left: 6.5%;
     top: 26px;
     width: 50px;
     cursor: pointer;
@@ -66,6 +66,7 @@ html{
     row-gap: 2em;
 }
 .organizer-heading{
+    color: #565656;
     font-size: 3.5em;
     display: block;
     text-align: center;
@@ -105,6 +106,20 @@ html{
     font-size: 0.9em;
     text-align: center;
     padding-top: 1em;
+}
+.twitter-logo{
+    position: relative;
+    left: 46%;
+    top: -1.26em;
+    cursor: pointer;
+    color: #565656;
+    transition: color 300ms;
+}
+.twitter-logo:hover{
+    color: #0a58ca;
+}
+#abhinav-card .card-body, #tushar-card .card-body{
+    margin-top: -1.25em;
 }
 #colton-card{
     grid-column-start: 2;
@@ -153,6 +168,7 @@ html{
     margin: 50px 100px 10px;
     font-size: .7em;
 }
+
 
 /* Media Query Code to make the website responsive*/
 @media screen and (min-width:2300px){
@@ -434,6 +450,27 @@ html{
     .social-icon{
         position: relative;
         left: 5%;
+    }
+}
+@media screen and (max-width :1690px){
+    .logo{
+        left: 6%;
+    }
+}
+@media screen and (max-width :1150px){
+    .logo{
+        left: 5%;
+    }
+}
+@media screen and (max-width :950px){
+    .logo{
+        left: 4%;
+    }
+}
+@media screen and (max-width :770px){
+    .logo{
+        left: 3%;
+        top: 35px;
     }
 }
 @media screen and (max-width :1690px) and (min-width: 1500px){
