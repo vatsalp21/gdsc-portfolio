@@ -76,7 +76,7 @@ html{
     display: block;
     text-align: center;
     position: relative;
-    top: .85em;
+    top: 1.15em !important;
     font-weight: 400;
 }
 .card{
