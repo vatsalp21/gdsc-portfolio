@@ -19,7 +19,7 @@ html{
 }
 .logo-heading{
     position: fixed;
-    top: -4px;
+    top: 20px;
 }
 .flexbox a{
     text-decoration: none;
@@ -40,7 +40,7 @@ html{
     color:#575a5c;
     font-size: 1.2em;
     text-decoration: none;
-    padding: 1.5em 0em;
+    padding: 0em 0em;
 }
 .flexbox-part-one{
     display: flex;
@@ -1258,7 +1258,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 830px){
     .logo-heading{
         font-size: 1em !important;
-        top: 2.5px;
+        top: 25px;
     }
 }
 @media screen and (max-width: 830px) and (min-width: 760px){
@@ -1356,13 +1356,18 @@ input[type="checkbox"] {
         left: 3%;
     }
 }
+@media screen and (max-width: 760px) {
+    .logo-heading{
+        top: 25px !important;
+    }
+}
 @media screen and (max-width: 760px) and (min-width: 700px){
     .flexbox-part-two a{
         font-size: .9em;
     }
     .logo-heading{
         font-size: 1em !important;
-        top: 2px;
+        top: 25px;
     }
     .christ-heading{
         font-size: 2.25em !important;
@@ -1549,9 +1554,9 @@ input[type="checkbox"] {
             margin-left: 40px;
         }
 }
-@media screen and (max-width: 630px){
+@media screen and (max-width: 660px){
         .flexbox-part-two{
-            gap: 1.1em;
+            gap: 1.1em !important;
         }
 }
 @media screen and (max-width: 630px) and (min-width: 560px){
