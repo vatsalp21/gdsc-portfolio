@@ -4,9 +4,6 @@
 main{
     overflow-x: hidden;
 }
-.dropdown-item{
-    /* overflow-y: hidden; */
-}
 html{
     scroll-behavior: smooth;
 }
