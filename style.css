@@ -122,7 +122,7 @@ input[type="checkbox"] {
   margin-top: 15px;
   width: 800px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 9px;
   overflow: hidden;
 }
 
@@ -148,10 +148,10 @@ input[type="checkbox"] {
 .about{
     position: relative;
     color: black;
-    top: -1em;
+    top: -3em;
 }
 .about-heading{
-    color: #565656;
+    color: #444444;
     font-size: 3.5em;
     display: block;
     text-align: center;
@@ -168,9 +168,9 @@ input[type="checkbox"] {
 
 .join-us{
     position: relative;
-    top: 0em;
+    top: -1.5em;
     display: flex;
-    gap: 4em;
+    gap: 3.2em;
     justify-content: center;
     font-size: 1em;
     align-items: center;
@@ -178,7 +178,7 @@ input[type="checkbox"] {
 .join-btn,.contact-btn{
     background-color: #2e77ec;
     color:white;
-    padding: 6px 14px;
+    padding: 6px 18px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 300ms;
@@ -195,11 +195,11 @@ input[type="checkbox"] {
 }
 .interaction-navbar{
     background-color: #E0F1FF;
-    padding: 12px 0;
+    padding: 10px 0;
     font-size: 1.25em;
     font-weight: 500;
     position: relative;
-    top: 5em !important;
+    top: 4em !important;
     display: flex;
     gap: 1em;
     justify-content: space-evenly;
@@ -214,7 +214,7 @@ input[type="checkbox"] {
 }
 .why-gdsc{
     position: relative;
-    top: 3em !important;
+    top: 1em !important;
     display:flex;
     justify-content: center;
     gap: 5em;
@@ -231,16 +231,18 @@ input[type="checkbox"] {
 }
 .club{
     position: relative;
-    top: 7.75em;
-    padding: 4em 0 9em 0;
-    background-image: url(https://i.ibb.co/LJHNsMd/clubs-background-image.png);
+    top: 5.75em;
+    margin-bottom: 3em;
+    padding: 4em 0 10em 0;
+    background-image: url(https://i.postimg.cc/SK1fnkZQ/clubs-background-image.png);
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
     z-index: -1;
+    opacity: .8;
 }
 .club-heading{
-    color: #323538;
+    color: #161617;
     display: block;
     text-align: center;
     font-size: 4em;
@@ -251,7 +253,7 @@ input[type="checkbox"] {
     padding-top: 1.25em;
 }
 .club-text{
-    color: #323538;
+    color: #070707;
     display: block;
     text-align: center;
     font-size: 1.3em;
@@ -260,6 +262,7 @@ input[type="checkbox"] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 5em 5em 3em 12em;
+    justify-items: center;
 }
 .club-card{
     transform: scale(.9);
@@ -273,21 +276,21 @@ input[type="checkbox"] {
     position: relative;
     top: 0em;
     border-top: 10px solid #006dff4d;
-    padding-top: 4em;
+    padding-top: 3em;
     background-color: #F2FAFF;
-    padding-bottom: 4em;
+    padding-bottom: 5em;
 }
 .photo-heading{
     display: block;
     text-align: center;
     font-size: 4em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.3em;
     color: #464a4e;
 }
 .slider{
     margin-top: -2em;
     padding-bottom: 0;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(255, 255, 255, 6%) 0px 1px 1px 0px inset, rgba(50, 50, 93, 15%) 0px 50px 100px -20px, rgba(0, 0, 0, 15%) 0px 30px 60px -30px;
 }
 
 
@@ -379,7 +382,7 @@ input[type="checkbox"] {
 .banner-image{
     position: relative;
     top: 4.75em;
-    opacity: .95;
+    opacity: .9;
     width: 100%;
     border-bottom: 10px solid #006dff4d;
     z-index: -1;
@@ -409,8 +412,8 @@ input[type="checkbox"] {
 
 /* Css Styling for Footer*/
 .footer-nav{
-    border-top: 1px solid #dadce0;
-    border-bottom: 1px solid #dadce0;
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
     display: flex;
     gap: 9em;
 }
@@ -492,9 +495,10 @@ input[type="checkbox"] {
     }
     .club{
         padding-top: 6em;
+        margin-bottom:-7em;
     }
     .club-grid{
-        margin: -2.5em 0em 7em 18em;
+        margin: -2.5em 18em 7em 18em;
     }
     .club-heading{
         font-size: 6em;
@@ -567,9 +571,10 @@ input[type="checkbox"] {
     }
     .club{
         padding-top: 6em;
+        margin-bottom:-7em;
     }
     .club-grid{
-        margin: -3em 0em 7em 12em;
+        margin: -3em 12em 7em 12em;
     }
     .club-heading{
         font-size: 5.8em;
@@ -641,9 +646,11 @@ input[type="checkbox"] {
     }
     .club{
         padding-top: 6em;
+        margin-bottom: -6em;
     }
     .club-grid{
-        margin: -5em 0em 7em 8em;
+        margin: -5em 8em 7em 8em;
+ 
     }
     .club-heading{
         font-size: 5.4em;
@@ -686,17 +693,17 @@ input[type="checkbox"] {
         top: -4em;
     }
     .about-heading{
-        font-size: 5em;
+        font-size: 4em;
     }
     .about-text{
-        font-size: 1.65em;
+        font-size: 1.6em;
     }
     .join-us{
         font-size: 1.5em;
     }
     .why-gdsc{
         top: 13em;
-        gap: .35em;
+        gap: .8em;
     }
     .card{
         transform: scale(.95);
@@ -706,29 +713,30 @@ input[type="checkbox"] {
         transform: scale(1);
     }
     .card-title{
-        font-size: 2em;
+        font-size: 1.89em;
     }
     .card-text{
         font-size: 1.2em;
     }
     .interaction-navbar{
-        font-size: 1.75em;
+        font-size: 1.55em;
         top: 10em;
     }
     .club{
         padding-top: 6em;
     }
     .club-grid{
-        margin: -5.5em 0em 7em 6em;
+        margin: -7.5em 5em 7em 5em;
+        justify-items:center;
     }
     .club-heading{
-        font-size: 5em;
+        font-size: 4.8em;
     }
     .club-text{
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .club-card{
-        margin-top: 10em;
+        margin-top: 6em;
         transform: scale(1.1);
         transition: transform 500ms;
     }
@@ -742,7 +750,7 @@ input[type="checkbox"] {
         font-size: 1.1em;
     }
     .photo-heading{
-        font-size: 5em;
+        font-size: 4.8em;
     }
     .footer-nav{
         font-size: 1.35em;
@@ -755,7 +763,7 @@ input[type="checkbox"] {
     }
     .christ-heading{
         font-size: 4em !important;
-        top: -2.5em;
+        top: -3.5em;
     }
     .about-heading{
         font-size: 4.5em;
@@ -793,9 +801,10 @@ input[type="checkbox"] {
     }
     .club{
         padding-top: 6em;
+        margin-bottom: -6em;
     }
     .club-grid{
-        margin: -6em 0em 7em 8em;
+        margin: -6em 8em 7em 8em;
         grid-template-columns: repeat(3, 1fr);
     }
     .club-heading{
