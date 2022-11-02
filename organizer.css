@@ -9,7 +9,7 @@ html{
 }
 .logo{
     position: fixed;
-    left: 6.5%;
+    left: 2.5%;
     top: 26px;
     width: 50px;
     cursor: pointer;
@@ -71,7 +71,7 @@ html{
     display: block;
     text-align: center;
     position: relative;
-    top: .5em;
+    top: .65em !important;
     font-weight: 400;
 }
 .card{
@@ -82,6 +82,11 @@ html{
 .card:hover{
     background-color: #FFF5FF;
     transform: scale(1.05);
+}
+.twitter-logo{
+    position: relative;
+    left: 45.5%;
+    top: -23px;
 }
 .card-title{
     text-align: center;
@@ -106,20 +111,6 @@ html{
     font-size: 0.9em;
     text-align: center;
     padding-top: 1em;
-}
-.twitter-logo{
-    position: relative;
-    left: 46%;
-    top: -1.26em;
-    cursor: pointer;
-    color: #565656;
-    transition: color 300ms;
-}
-.twitter-logo:hover{
-    color: #0a58ca;
-}
-#abhinav-card .card-body, #tushar-card .card-body{
-    margin-top: -1.25em;
 }
 #colton-card{
     grid-column-start: 2;
@@ -450,27 +441,6 @@ html{
     .social-icon{
         position: relative;
         left: 5%;
-    }
-}
-@media screen and (max-width :1690px){
-    .logo{
-        left: 6%;
-    }
-}
-@media screen and (max-width :1150px){
-    .logo{
-        left: 5%;
-    }
-}
-@media screen and (max-width :950px){
-    .logo{
-        left: 4%;
-    }
-}
-@media screen and (max-width :770px){
-    .logo{
-        left: 3%;
-        top: 35px;
     }
 }
 @media screen and (max-width :1690px) and (min-width: 1500px){
