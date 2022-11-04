@@ -9,7 +9,7 @@ html{
 }
 .logo{
     position: fixed;
-    left: 2.5%;
+    left: 6.5%;
     top: 26px;
     width: 50px;
     cursor: pointer;
@@ -87,6 +87,9 @@ html{
     position: relative;
     left: 45.5%;
     top: -23px;
+}
+#abhinav-card .card-body, #tushar-card .card-body{
+    margin-top: -1.35em;
 }
 .card-title{
     text-align: center;
@@ -207,6 +210,35 @@ html{
     .social-icon{
         position: relative;
         left: 9%;
+    }
+}
+@media screen and (max-width :1690px){
+    .logo{
+        left: 6%;
+        top: 27px;
+    }
+}
+@media screen and (max-width :1360px){
+    .logo{
+        left: 5.5%;
+        top: 27px;
+    }
+}
+@media screen and (max-width :1100px){
+    .logo{
+        left: 5%;
+        top: 27px;
+    }
+}
+@media screen and (max-width :920px){
+    .logo{
+        left: 4%;
+        top: 27px;
+    }
+}
+@media screen and (max-width :350px){
+    .logo{
+        width: 40px;
     }
 }
 @media screen and (max-width: 2300px) and (min-width: 2200px){
