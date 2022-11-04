@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -77,6 +78,7 @@ html{
 .card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px 0;
+    border-radius: 12px !important;
     transition: transform 600ms, background-color 600ms;
 }
 .card:hover{
