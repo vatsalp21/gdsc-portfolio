@@ -2163,6 +2163,7 @@ input[type="checkbox"] {
         padding-bottom: 1.5%;
         gap: 0em;
         margin-left: 0;
+        justify-items: center;
     }
     .about-card{
         width: 22rem !important;
