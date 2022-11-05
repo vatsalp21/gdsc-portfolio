@@ -18,7 +18,7 @@ html{
 }
 .logo-heading{
     position: fixed;
-    top: 20px;
+    top: 15px;
 }
 .flexbox a{
     text-decoration: none;
@@ -1143,6 +1143,18 @@ input[type="checkbox"] {
         margin-right: 50px;
     }
 }
+@media screen and (max-width :1370px){
+    .logo-heading img{
+        width: 280px !important;
+        margin-top: 2px;
+    }
+}
+@media screen and (max-width :830px){
+    .logo-heading img{
+        width: 250px !important;
+        margin-top: -5px;
+    }
+}
 @media screen and (max-width: 1000px) and (min-width: 900px){
     .flexbox-part-two a{
         font-size: 1em;
@@ -1539,7 +1551,7 @@ input[type="checkbox"] {
         margin-left: 60px;
     }
 }
-@media screen and (max-width: 700px) and (min-width: 630px){
+@media screen and (max-width: 700px) and (min-width: 640px){
         .flexbox-part-two a{
             font-size: .85em;
         }
@@ -1649,7 +1661,7 @@ input[type="checkbox"] {
             gap: 1.1em !important;
         }
 }
-@media screen and (max-width: 630px) and (min-width: 250px){
+@media screen and (max-width: 640px) and (min-width: 250px){
     .banner-image{
         border-bottom: 5px solid #006dff4d !important;
     }
@@ -1657,7 +1669,7 @@ input[type="checkbox"] {
         border-top: 5px solid #006dff4d !important;
     }
 }
-@media screen and (max-width: 630px) and (min-width: 560px){
+@media screen and (max-width: 640px) and (min-width: 560px){
         .flexbox-part-two a{
             font-size: .85em;
         }
