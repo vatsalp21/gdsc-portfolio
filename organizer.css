@@ -111,7 +111,9 @@ html{
     overflow-y: hidden;
 }
 .card-text{
-    font-size: 0.9em;
+    font-size: 0.75em;
+    color: #565656;
+    font-style: italic;
     text-align: center;
     padding-top: 1em;
 }
