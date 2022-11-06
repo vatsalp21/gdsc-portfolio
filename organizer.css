@@ -104,6 +104,9 @@ html{
     position: relative;
     left: 22.5%
 }
+#nitish-card  > img{
+    margin-top: -12px;
+}
 .card-subtitle{
     text-align: center;
     font-size: 0.9em;
