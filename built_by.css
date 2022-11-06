@@ -96,6 +96,19 @@ html{
     font-size: 1.3em;
     overflow-y: hidden;
 }
+.card-subtitle{
+    text-align: center;
+    font-size: 0.9em;
+    color: #5f6368;
+    overflow-y: hidden;
+}
+.card-text{
+    font-size: 0.75em;
+    color: #565656;
+    font-style: italic;
+    text-align: center;
+    padding-top: 1em;
+}
 .card-image{
     width: 150px;
     position: relative;
