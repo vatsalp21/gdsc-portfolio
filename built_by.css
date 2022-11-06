@@ -96,19 +96,6 @@ html{
     font-size: 1.3em;
     overflow-y: hidden;
 }
-.card-subtitle{
-    text-align: center;
-    font-size: 0.9em;
-    color: #5f6368;
-    overflow-y: hidden;
-}
-.card-text{
-    font-size: 0.75em;
-    color: #565656;
-    font-style: italic;
-    text-align: center;
-    padding-top: 1em;
-}
 .card-image{
     width: 150px;
     position: relative;
@@ -117,6 +104,35 @@ html{
 #divyansh-card img{
     margin-top: -10px;
 }
+.card-subtitle{
+    text-align: center;
+    font-size: 0.9em;
+    color: #5f6368;
+    overflow-y: hidden;
+}
+.twitter-logo{
+    position: relative;
+    left: 50%;
+}
+.card-text{
+    font-size: 0.75em;
+    color: #565656;
+    font-style: italic;
+    text-align: center;
+    padding-top: 1em;
+}
+#colton-card{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#sachin-card{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.footer-nav{
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
     gap: 9em;
 }
 .footer-part{
